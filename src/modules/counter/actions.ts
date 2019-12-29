@@ -1,10 +1,14 @@
-import { createAction } from "redux-actions";
+export const INCREMENT = "INCREMENT" as const;
+export const DECREMENT = "DECREMENT" as const;
 
-export const INCREMENT = "increment";
-export const DECREMENT = "decrement";
+export const increment = (count: number) => ({
+  type: INCREMENT,
+  payload: { count }
+});
 
-export const increment = createAction(INCREMENT);
-export const decrement = createAction(DECREMENT);
+export const decrement = () => ({
+  type: DECREMENT
+});
 
 export type Actions =
   | ReturnType<typeof increment>

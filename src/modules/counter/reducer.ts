@@ -11,7 +11,7 @@ const initialState: CounterState = {
 export default (state = initialState, action: Actions) => {
   switch (action.type) {
     case INCREMENT:
-      return { count: state.count + 1 };
+      return { count: state.count + action.payload.count };
     case DECREMENT:
       return { count: state.count - 1 };
     default:
