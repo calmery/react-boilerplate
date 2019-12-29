@@ -78,7 +78,8 @@
     "extends": [
       "eslint:recommended",
       "plugin:@typescript-eslint/recommended",
-      "plugin:prettier/recommended"
+      "plugin:prettier/recommended",
+      "plugin:react/recommended"
     ],
     "ignorePatterns": [
       "*.d.ts"
@@ -95,6 +96,9 @@
       "react",
       "react-hooks"
     ],
+    "rules": {
+      "@typescript-eslint/explicit-function-return-type": 0
+    },
     "settings": {
       "react": {
         "version": "detect"
