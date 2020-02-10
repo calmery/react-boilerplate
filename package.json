@@ -66,8 +66,8 @@
     "workbox-webpack-plugin": "4.3.1"
   },
   "engines": {
-    "node": "12.14.1",
-    "npm": "6.13.6"
+    "node": "12.15.0",
+    "npm": "6.13.7"
   },
   "eslintConfig": {
     "env": {
