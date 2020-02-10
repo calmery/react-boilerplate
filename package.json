@@ -152,10 +152,9 @@
   "name": "react-boilerplate",
   "private": true,
   "scripts": {
-    "build": "npm run clean && run-script-os",
+    "build": "rimraf build && run-script-os",
     "build:default": "NODE_ENV=production webpack",
     "build:win32": "set NODE_ENV=production webpack",
-    "clean": "rimraf build",
     "prettify": "npm-run-all prettify:*",
     "prettify:static": "prettier --ignore-path .gitignore --write \"**/*.{html,json,md,scss}\"",
     "prettify:typescript": "eslint --ignore-path .gitignore --fix . --ext .ts --ext .tsx",

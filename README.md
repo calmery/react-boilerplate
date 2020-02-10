@@ -10,7 +10,6 @@ $ npm ci
 
 ```bash
 $ npm run build
-$ npm run clean
 $ npm run prettify
 $ npm start
 $ npm test
