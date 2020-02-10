@@ -45,7 +45,6 @@
     "lint-staged": "9.5.0",
     "mini-css-extract-plugin": "0.9.0",
     "node-sass": "4.13.0",
-    "npm-run-all": "4.1.5",
     "optimize-css-assets-webpack-plugin": "5.0.3",
     "postcss-loader": "3.0.0",
     "prettier": "1.19.1",
@@ -141,17 +140,14 @@
     ]
   },
   "lint-staged": {
-    "**/*.(html|json|md|yml)": [
-      "npm run lint:static",
-      "git add"
+    "**/*.(html|json|md|scss|yml)": [
+      "prettier --write"
     ],
     "**/*.svg": [
-      "svgo",
-      "git add"
+      "svgo"
     ],
     "**/*.(ts|tsx)": [
-      "npm run lint:typescript",
-      "git add"
+      "eslint --fix"
     ]
   },
   "name": "react-boilerplate",
@@ -160,9 +156,7 @@
     "build": "rimraf build && run-script-os",
     "build:default": "NODE_ENV=production webpack",
     "build:win32": "set NODE_ENV=production webpack",
-    "lint": "npm-run-all lint:*",
-    "lint:static": "prettier --ignore-path .gitignore --write \"**/*.{html,json,md,scss}\"",
-    "lint:typescript": "eslint --ignore-path .gitignore --fix . --ext .ts --ext .tsx",
+    "lint": "eslint --ignore-path .gitignore --fix . --ext .ts --ext .tsx",
     "start": "webpack-dev-server --host 0.0.0.0 --port 3000",
     "test": "jest --coverage"
   },
