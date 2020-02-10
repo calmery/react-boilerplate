@@ -159,7 +159,7 @@
     "prettify:static": "prettier --ignore-path .gitignore --write \"**/*.{html,json,md,scss}\"",
     "prettify:typescript": "eslint --ignore-path .gitignore --fix . --ext .ts --ext .tsx",
     "start": "webpack-dev-server --host 0.0.0.0 --port 3000",
-    "test": "jest"
+    "test": "jest --coverage"
   },
   "version": "0.1.0"
 }
